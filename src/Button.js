@@ -1,9 +1,9 @@
-import React from 'react'
-import classNames from 'classnames'
+import React from 'react';
+import classNames from 'classnames';
 
 
 function Button(props) {
-  console.log(props)
+  console.log(props);
   return (
     <button
       onClick={props.onClick}
@@ -13,7 +13,7 @@ function Button(props) {
     >
       {props.children}
     </button>
-  )
+  );
 }
 
 export default Button;

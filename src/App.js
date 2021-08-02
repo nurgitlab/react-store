@@ -1,12 +1,12 @@
 import React from 'react';
-import logoSvg from './scss/assets/img/pizza-logo.svg'
+import logoSvg from './scss/assets/img/pizza-logo.svg';
 import Header from './Header';
 import Button from "./Button";
 
-function  App() {
+function App() {
   return (
     <div className="wrapper">
-      <Header />
+      <Header/>
       <div className="content">
         <div className="container">
           <div className="content__top">

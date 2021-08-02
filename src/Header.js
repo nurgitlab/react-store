@@ -4,7 +4,7 @@ import Button from "./Button";
 
 
 function Header() {
-  return(
+  return (
     <div className="header">
       <div className="container">
         <div className="header__logo">
@@ -52,7 +52,7 @@ function Header() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Header;
