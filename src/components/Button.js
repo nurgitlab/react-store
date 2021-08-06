@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 
-const Button = ({ onClick, className, outline, children }) => {
+const Button = ({onClick, className, outline, children}) => {
   return (
     <button
       onClick={onClick}
@@ -13,6 +13,6 @@ const Button = ({ onClick, className, outline, children }) => {
       {children}
     </button>
   );
-}
+};
 
 export default Button;
