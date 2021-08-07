@@ -1,18 +1,41 @@
 import React from 'react';
 
-function Categories() {
-  return(
-    <div className="categories">
-      <ul>
-        <li className="active">Все</li>
-        <li>Мясные</li>
-        <li>Вегетарианская</li>
-        <li>Гриль</li>
-        <li>Острые</li>
-        <li>Закрытые</li>
-      </ul>
-    </div>
-  )
+
+class Categories extends React.Component {
+  state = {
+    activeItem: 3,
+  };
+
+  onSelectItem = index => {
+    this.setState({
+      activeItem: index
+    });
+  };
+
+
+  render() {
+    const {items, onClickItem} = this.props;
+    return (
+      <div className="categories">
+        <ul>
+          <li>Все</li>
+          {
+            items.map((name, index) => (
+              <li
+                className={
+                  this.state.activeItem === index ? `active` : ``
+                }
+                onClick={() => this.onSelectItem(index)}
+                key={`${name}_${index}`}
+              >
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default Categories;
