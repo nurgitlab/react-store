@@ -1,4 +1,4 @@
-import logoSvg from "../scss/assets/img/pizza-logo.svg";
+import logoSvg from "../scss/assets/img/shava-logo.svg";
 import React from 'react';
 import { Button } from './index';
 import { Link } from "react-router-dom";
@@ -10,10 +10,10 @@ function Header() {
       <div className="container">
         <Link to="/">
           <div className="header__logo">
-            <img width="38" src={logoSvg} alt="Pizza logo"/>
+            <img width="38" src={logoSvg} alt="Shava logo"/>
             <div>
-              <h1>React Pizza</h1>
-              <p>самая вкусная пицца во вселенной</p>
+              <h1>Online shaurma</h1>
+              <p>самая вкусная шаурма во вселенной</p>
             </div>
           </div>
         </Link>
