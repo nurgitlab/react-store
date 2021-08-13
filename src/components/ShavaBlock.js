@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 
-function ShavaBlock({name, imageUrl}) {
-  return(
+function ShavaBlock({name, imageUrl, price, }) {
+
+
+  return (
     <div className="shava-block">
       <img
         className="shava-block__image"
@@ -18,12 +20,12 @@ function ShavaBlock({name, imageUrl}) {
         <ul>
           <li className="active">майонез
           </li>
-          <li>соус острый</li>
+          <li className="disabled">соус острый</li>
           <li>соус фирменный</li>
         </ul>
       </div>
       <div className="shava-block__bottom">
-        <div className="shava-block__price">от 100 ₽</div>
+        <div className="shava-block__price">от {price} ₽</div>
         <div className="button button--outline button--add">
           <svg
             width="12"
@@ -42,7 +44,7 @@ function ShavaBlock({name, imageUrl}) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ShavaBlock
+export default ShavaBlock;

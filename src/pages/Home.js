@@ -28,8 +28,7 @@ function Home({items}) {
           items.map(obj => (
             <ShavaBlock
               key={obj.id}
-              name={obj.name}
-              imageUrl={obj.imageUrl}
+              {...obj}
             />
             ))
         }
