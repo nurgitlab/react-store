@@ -84,4 +84,12 @@ ShavaBlock.propTypes = {
   sauces: PropTypes.arrayOf(PropTypes.number),
 };
 
+ShavaBlock.defaultProps = {
+  name: 'Default',
+  imageUrl: 'http://arenda-info.by/wp-content/uploads/2021/01/1535899253_404-image-2x-1024x506.png',
+  price: 0,
+  types: [],
+  sauces: [],
+};
+
 export default ShavaBlock;
