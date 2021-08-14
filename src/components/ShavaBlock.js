@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
-function ShavaBlock({name, imageUrl, price, }) {
+function ShavaBlock({name, imageUrl, price }) {
+  const types = ['обычная', 'двойная']
+  const [activeType, setActiveType] = useState(1)
 
+  const onSelectType = (index) => {
+    setActiveType(index)
+  }
 
   return (
     <div className="shava-block">
@@ -14,8 +19,13 @@ function ShavaBlock({name, imageUrl, price, }) {
       <h4 className="shava-block__title">{name}</h4>
       <div className="shava-block__selector">
         <ul>
-          <li>обычная</li>
-          <li className="active">двойная</li>
+          {types.map((type, index) =>
+            (<li
+              onClick= {()=>onSelectType(index)}
+              className={activeType === index ? 'active' : ''}
+            >
+              {type}
+            </li>))}
         </ul>
         <ul>
           <li className="active">майонез
