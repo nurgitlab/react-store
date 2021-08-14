@@ -1,13 +1,20 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import classNames from "classnames";
 
 
-function ShavaBlock({name, imageUrl, price }) {
-  const types = ['обычная', 'двойная']
-  const [activeType, setActiveType] = useState(1)
+function ShavaBlock({name, imageUrl, price, types, sauces}) {
+  const aviableTypes = ['обычная', 'двойная'];
+  const aviableSauces = ['майонезный', 'острый', 'фирменный'];
+  const [activeType, setActiveType] = useState(types[0]);
+  const [activeSauce, setActiveSauce] = useState(sauces[0]);
 
   const onSelectType = (index) => {
-    setActiveType(index)
-  }
+    setActiveType(index);
+  };
+
+  const onSelectSauce = (index) => {
+    setActiveSauce(index);
+  };
 
   return (
     <div className="shava-block">
@@ -19,19 +26,30 @@ function ShavaBlock({name, imageUrl, price }) {
       <h4 className="shava-block__title">{name}</h4>
       <div className="shava-block__selector">
         <ul>
-          {types.map((type, index) =>
+          {aviableTypes.map((type, index) =>
             (<li
-              onClick= {()=>onSelectType(index)}
-              className={activeType === index ? 'active' : ''}
+              key={type}
+              onClick={() => onSelectType(index)}
+              className={classNames({
+                active: activeType === index,
+                disabled: !types.includes(index),
+              })}
             >
               {type}
             </li>))}
         </ul>
         <ul>
-          <li className="active">майонез
-          </li>
-          <li className="disabled">соус острый</li>
-          <li>соус фирменный</li>
+          {aviableSauces.map((sauce, index) =>
+            (<li
+              key={sauce}
+              onClick={() => onSelectSauce(index)}
+              className={classNames({
+                active: activeSauce === index,
+                disabled: !sauces.includes(index),
+              })}
+            >
+              {sauce}
+            </li>))}
         </ul>
       </div>
       <div className="shava-block__bottom">
