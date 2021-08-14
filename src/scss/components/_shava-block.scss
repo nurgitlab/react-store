@@ -10,7 +10,10 @@
   }
 
   &__image {
-    width: 260px;
+    width: 280px;
+    height: 180px;
+    border-radius: 10px;
+    background-size: cover;
   }
 
   &__title {

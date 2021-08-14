@@ -3,6 +3,7 @@ import { Categories, SortPopup } from "../components";
 import ShavaBlock from "../components/ShavaBlock";
 
 
+
 function Home({items}) {
   return (
     <div className="container">
@@ -30,7 +31,7 @@ function Home({items}) {
               key={obj.id}
               {...obj}
             />
-            ))
+          ))
         }
       </div>
     </div>

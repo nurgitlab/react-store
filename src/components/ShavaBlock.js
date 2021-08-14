@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classNames from "classnames";
+import PropTypes from 'prop-types';
 
 
 function ShavaBlock({name, imageUrl, price, types, sauces}) {
@@ -74,5 +75,13 @@ function ShavaBlock({name, imageUrl, price, types, sauces}) {
     </div>
   );
 }
+
+ShavaBlock.propTypes = {
+  name: PropTypes.string,
+  imageUrl: PropTypes.string,
+  price: PropTypes.number,
+  types: PropTypes.arrayOf(PropTypes.number),
+  sauces: PropTypes.arrayOf(PropTypes.number),
+};
 
 export default ShavaBlock;

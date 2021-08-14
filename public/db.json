@@ -2,7 +2,7 @@
   "shavas": [
     {
       "id": 0,
-      "imageUrl": "https://elbekebaphouse.de/wp-content/uploads/2016/05/4-380x380.png",
+      "imageUrl": "https://avatars.mds.yandex.net/get-zen_doc/1101166/pub_5c1be5b2e4602000a991a2bc_5c1bf72576ee8500aa4617ff/scale_1200",
       "name": "Уйгурская",
       "types": [0, 1],
       "sauces": [0, 1, 2],
@@ -12,7 +12,7 @@
     },
     {
       "id": 1,
-      "imageUrl": "https://elbekebaphouse.de/wp-content/uploads/2016/05/4-380x380.png",
+      "imageUrl": "http://afisha.orsk.ru/images/afisha/dishes/o/1575540585314_15755405853796.png",
       "name": "Белорусская (с картошкой)",
       "types": [0],
       "sauces": [0, 1, 2],
@@ -22,7 +22,7 @@
     },
     {
       "id": 2,
-      "imageUrl": "https://elbekebaphouse.de/wp-content/uploads/2016/05/4-380x380.png",
+      "imageUrl": "https://oxusmoscow.ru/wp-content/uploads/2018/03/shaurmaDSC_2374-600x400.jpg",
       "name": "Казахская (из конины)",
       "types": [0],
       "sauces": [0, 1, 2],
@@ -32,7 +32,7 @@
     },
     {
       "id": 3,
-      "imageUrl": "https://elbekebaphouse.de/wp-content/uploads/2016/05/4-380x380.png",
+      "imageUrl": "https://sun9-70.userapi.com/t4p8enou9p5gCCqCNsWAt43L9k0nv2z2mjMr6A/JwxrGfcHtKI.jpg",
       "name": "Рыбная",
       "types": [1],
       "sauces": [0, 1, 2],
@@ -42,7 +42,7 @@
     },
     {
       "id": 4,
-      "imageUrl": "https://elbekebaphouse.de/wp-content/uploads/2016/05/4-380x380.png",
+      "imageUrl": "https://vchaspik.ua/sites/default/files/story/u11979/1471254612_10.jpg",
       "name": "С чипсами",
       "types": [0, 1],
       "sauces": [0, 1, 2],
@@ -52,7 +52,7 @@
     },
     {
       "id": 5,
-      "imageUrl": "https://elbekebaphouse.de/wp-content/uploads/2016/05/4-380x380.png",
+      "imageUrl": "https://static.tildacdn.com/tild3363-3039-4364-a130-313831663939/_-.jpg",
       "name": "Ананасовая",
       "types": [0],
       "sauces": [0, 1, 2],
@@ -62,7 +62,7 @@
     },
     {
       "id": 6,
-      "imageUrl": "https://elbekebaphouse.de/wp-content/uploads/2016/05/4-380x380.png",
+      "imageUrl": "https://im0-tub-kz.yandex.net/i?id=dfe1ac32aa44c02c28e45d350bd20afa-sr&n=13",
       "name": "Black Salami",
       "types": [0, 1],
       "sauces": [0, 1, 2],
@@ -72,7 +72,7 @@
     },
     {
       "id": 7,
-      "imageUrl": "https://elbekebaphouse.de/wp-content/uploads/2016/05/4-380x380.png",
+      "imageUrl": "https://avatars.mds.yandex.net/get-zen_doc/60857/pub_5e1c5829ee5a8a00b1ccd55d_5e1db76211691d00ae97360d/scale_1200",
       "name": "Турецкая",
       "types": [0, 1],
       "sauces": [0, 1, 2],
@@ -82,8 +82,8 @@
     },
     {
       "id": 8,
-      "imageUrl": "https://elbekebaphouse.de/wp-content/uploads/2016/05/4-380x380.png",
-      "name": "Домашняя",
+      "imageUrl": "https://content.onliner.by/forum/517474/800x800/92215f1ba29d5e7e2b4f2fa12584db9d.jpeg",
+      "name": "Домашняя Jambo",
       "types": [0, 1],
       "sauces": [0, 1, 2],
       "price": 395,
@@ -92,7 +92,7 @@
     },
     {
       "id": 9,
-      "imageUrl": "https://elbekebaphouse.de/wp-content/uploads/2016/05/4-380x380.png",
+      "imageUrl": "https://static.mk.ru/upload/entities/2018/03/16/articles/facebookPicture/7c/73/df/5a/db6f76573d84cdc0c5e030eeee26aafa.jpg",
       "name": "Мясная",
       "types": [0, 1],
       "sauces": [0, 1, 2],
