@@ -3,7 +3,6 @@ import { Categories, SortPopup } from "../components";
 import ShavaBlock from "../components/ShavaBlock";
 
 
-
 function Home({items}) {
   return (
     <div className="container">
@@ -26,7 +25,7 @@ function Home({items}) {
       <h2 className="content__title">Все шаурмы</h2>
       <div className="content__items">
         {
-          items.map(obj => (
+          items && items.map(obj => (
             <ShavaBlock
               key={obj.id}
               {...obj}

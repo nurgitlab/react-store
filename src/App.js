@@ -1,57 +1,37 @@
 import React, { Component, useEffect, useState } from 'react';
 import { Route } from "react-router-dom";
 import axios from "axios";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Header } from './components';
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import { setShavas as setShavasAction } from "./redux/actions/shavas";
+import { setShavas } from "./redux/actions/shavas";
 
 
-// function App() {
-//
-//
-//   useEffect(() => {
-//     axios.get('http://localhost:3000/db.json').then(({data}) => {
-//       setShavas(data.shavas);
-//     });
-//   }, []);
-//
-//   return (
-//
-//   );
-// }
+function App() {
+  const dispatch = useDispatch();
+  const {items} = useSelector(({shavas, filters}) => {
+    return {
+      items: shavas.items,
+      sortBy: filters.sortBy,
+    };
+  });
 
-class App extends Component {
-  componentDidMount() {
+  useEffect(() => {
     axios.get('http://localhost:3000/db.json').then(({data}) => {
-      this.props.setShavas(data.shavas);
+      dispatch(setShavas(data.shavas));
     });
-  }
+  }, []);
 
-  render() {
-    return (
-      <div className="wrapper">
-        <Header/>
-        <div className="content">
-          <Route path="/" render={() => <Home items={this.props.items}/>} exact/>
-          <Route path="/cart" component={Cart} exact/>
-        </div>
+  return (
+    <div className="wrapper">
+      <Header/>
+      <div className="content">
+        <Route path="/" render={() => <Home items={items}/>} exact/>
+        <Route path="/cart" component={Cart} exact/>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    items: state.shavas.items,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setShavas: (items) => dispatch(setShavasAction(items)),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
