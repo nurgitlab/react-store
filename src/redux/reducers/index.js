@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
-import filtersReducer from './filters';
+import filtersReducer from "./filters";
 import shavasReducer from "./shavas";
 
 
 const rootReducer = combineReducers({
-  filtersReducer,
-  shavasReducer,
+  filters: filtersReducer,
+  shavas: shavasReducer,
 });
 
 export default rootReducer;
