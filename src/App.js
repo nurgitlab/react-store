@@ -10,12 +10,6 @@ import { setShavas } from "./redux/actions/shavas";
 
 function App() {
   const dispatch = useDispatch();
-  const {items} = useSelector(({shavas, filters}) => {
-    return {
-      items: shavas.items,
-      sortBy: filters.sortBy,
-    };
-  });
 
   useEffect(() => {
     axios.get('http://localhost:3000/db.json').then(({data}) => {
@@ -27,7 +21,7 @@ function App() {
     <div className="wrapper">
       <Header/>
       <div className="content">
-        <Route path="/" render={() => <Home items={items}/>} exact/>
+        <Route path="/" component={Home} exact/>
         <Route path="/cart" component={Cart} exact/>
       </div>
     </div>
