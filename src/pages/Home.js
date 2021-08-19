@@ -1,28 +1,33 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Categories, SortPopup } from "../components";
 import ShavaBlock from "../components/ShavaBlock";
 import { useSelector, useDispatch } from "react-redux";
+import { setCategory } from "../redux/actions/filters";
 
+
+const categoryNames = [
+  'Классические',
+  'Вегетарианские',
+  'Мясные',
+  'Острые',
+  'Особые',
+];
 
 function Home() {
+  const dispatch = useDispatch();
+  const items = useSelector(({shavas}) => shavas.items);
 
-  const {items} = useSelector(({shavas, filters}) => {
-    return {
-      items: shavas.items,
-    };
-  });
+  const onSelectCategory = useCallback((index) => {
+    dispatch(setCategory(index));
+  }, []);
 
   return (
     <div className="container">
       <div className="content__top">
         <Categories
-          items={[
-            'Куринная',
-            'Говяжья',
-            'Вегатарианская',
-            'Острая',
-            'Особая',
-          ]}/>
+          onClickItem={onSelectCategory}
+          items={categoryNames}
+        />
         <SortPopup
           items={[
             {name: 'популярности', type: 'popular'},
