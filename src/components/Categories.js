@@ -6,7 +6,7 @@ const Categories = React.memo(
     const [activeItem, setActiveItem] = useState(null);
     const onSelectItem = (index) => {
       setActiveItem(index);
-      onClickItem(index)
+      onClickItem(index);
     };
 
     return (
@@ -37,6 +37,6 @@ const Categories = React.memo(
       </div>
     );
   }
-)
+);
 
 export default Categories;

@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get('http://localhost:3000/db.json').then(({data}) => {
+    axios.get('http://localhost:3001/shavas').then(({data}) => {
       dispatch(setShavas(data.shavas));
     });
   }, []);

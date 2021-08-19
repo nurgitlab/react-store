@@ -13,6 +13,12 @@ const categoryNames = [
   'Особые',
 ];
 
+const sortItems = [
+  {name: 'популярности', type: 'popular'},
+  {name: 'цене', type: 'price'},
+  {name: 'алфавиту', type: 'alphabet'},
+]
+
 function Home() {
   const dispatch = useDispatch();
   const items = useSelector(({shavas}) => shavas.items);
@@ -28,12 +34,7 @@ function Home() {
           onClickItem={onSelectCategory}
           items={categoryNames}
         />
-        <SortPopup
-          items={[
-            {name: 'популярности', type: 'popular'},
-            {name: 'цене', type: 'price'},
-            {name: 'алфавиту', type: 'alphabet'},
-          ]}/>
+        <SortPopup items={sortItems}/>
       </div>
       <h2 className="content__title">Все шаурмы</h2>
       <div className="content__items">
