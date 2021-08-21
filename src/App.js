@@ -5,16 +5,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { Header } from './components';
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import { setShavas } from "./redux/actions/shavas";
+import { fetchShavas, setShavas } from "./redux/actions/shavas";
 
 
 function App() {
   const dispatch = useDispatch();
-
   useEffect(() => {
-    axios.get('http://localhost:3001/shavas').then(({data}) => {
-      dispatch(setShavas(data));
-    });
+    dispatch(fetchShavas());
   }, []);
 
   return (
