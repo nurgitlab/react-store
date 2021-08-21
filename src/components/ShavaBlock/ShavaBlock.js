@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import classNames from "classnames";
 import PropTypes from 'prop-types';
+import ContentLoader from "react-content-loader";
+import ShavaLoadingBlock from "./ShavaLoadingBlock";
 
 
 function ShavaBlock({name, imageUrl, price, types, sauces}) {
   const aviableTypes = ['обычная', 'двойная'];
   const aviableSauces = ['майонезный', 'острый', 'фирменный'];
+
   const [activeType, setActiveType] = useState(types[0]);
   const [activeSauce, setActiveSauce] = useState(sauces[0]);
 
