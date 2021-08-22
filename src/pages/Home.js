@@ -26,10 +26,11 @@ function Home() {
   const dispatch = useDispatch();
   const items = useSelector(({shavas}) => shavas.items);
   const isLoaded = useSelector(({shavas}) => shavas.isLoaded);
+  const {category, sortBy} = useSelector(({filters}) => filters);
 
   useEffect(() => {
     dispatch(fetchShavas());
-  }, []);
+  }, [category]);
 
   const onSelectCategory = useCallback((index) => {
     dispatch(setCategory(index));
@@ -49,13 +50,18 @@ function Home() {
         {
           isLoaded
             ? items.map(obj => (
-                <ShavaBlock
-                  key={obj.id}
-                  isLoading={true}
-                  {...obj}
-                />
-              ))
-            :Array(10).fill(<ShavaLoadingBlock/>)
+              <ShavaBlock
+                key={obj.id}
+                isLoading={true}
+                {...obj}
+              />
+            ))
+            : Array(10)
+              .fill(0)
+              .map((_, index) =>
+                <ShavaLoadingBlock
+                  key={index}
+                />)
         }
       </div>
     </div>
