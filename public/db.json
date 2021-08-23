@@ -7,12 +7,12 @@
       "types": [0, 1],
       "sauces": [0, 1, 2],
       "price": 803,
-      "category": 0,
+      "category": 4,
       "rating": 4
     },
     {
       "id": 1,
-      "imageUrl": "https://www.menu.by/resources/default/img/restaurant_products/small/1519203176-4138.jpeg",
+      "imageUrl": "https://zakaz.kebabsofra.ru/wp-content/uploads/2020/04/item_3059441_1-416x277.jpeg",
       "name": "Белорусская (с картошкой)",
       "types": [0],
       "sauces": [0, 1, 2],
@@ -27,12 +27,12 @@
       "types": [0],
       "sauces": [0, 1, 2],
       "price": 295,
-      "category": 1,
+      "category": 4,
       "rating": 4
     },
     {
       "id": 3,
-      "imageUrl": "https://sun9-70.userapi.com/t4p8enou9p5gCCqCNsWAt43L9k0nv2z2mjMr6A/JwxrGfcHtKI.jpg",
+      "imageUrl": "https://p1.zoon.ru/preview/I4RWelt2APzvnliOjz2fDA/1180x520x85/0/b/4/4f85bd543c72dd8114001989_51469f8b57004.jpg",
       "name": "Рыбная",
       "types": [1],
       "sauces": [0, 1, 2],
@@ -57,17 +57,17 @@
       "types": [0],
       "sauces": [0, 1, 2],
       "price": 580,
-      "category": 2,
+      "category": 3,
       "rating": 2
     },
     {
       "id": 6,
-      "imageUrl": "https://im0-tub-kz.yandex.net/i?id=dfe1ac32aa44c02c28e45d350bd20afa-sr&n=13",
+      "imageUrl": "https://im0-tub-kz.yandex.net/i?id=2a9f31cd243b3dbe366a076076d098a7-sr&n=13",
       "name": "Black Salami",
       "types": [0, 1],
       "sauces": [0, 1, 2],
       "price": 675,
-      "category": 1,
+      "category": 2,
       "rating": 9
     },
     {
@@ -82,12 +82,12 @@
     },
     {
       "id": 8,
-      "imageUrl": "https://content.onliner.by/forum/517474/800x800/92215f1ba29d5e7e2b4f2fa12584db9d.jpeg",
+      "imageUrl": "https://idoska-voronezh.ru/wp-content/uploads/27ec3b4e2142544c0a97ddac2d69b1fe.jpg",
       "name": "Домашняя Jambo",
       "types": [0, 1],
       "sauces": [0, 1, 2],
       "price": 395,
-      "category": 5,
+      "category": 2,
       "rating": 10
     },
     {
@@ -97,8 +97,18 @@
       "types": [0, 1],
       "sauces": [0, 1, 2],
       "price": 285,
-      "category": 5,
+      "category": 2,
       "rating": 7
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://abnews.ru/wp-content/uploads/2021/07/shawarma-4029889_1280-600x400.jpg",
+      "name": "Шаверма Ленинградская",
+      "types": [0, 1],
+      "sauces": [0, 1, 2],
+      "price": 285,
+      "category": 0,
+      "rating": 3
     }
   ]
 }

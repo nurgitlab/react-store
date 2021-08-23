@@ -6,12 +6,12 @@ export const setLoaded = (payload) => ({
   payload,
 });
 
-export const fetchShavas = () => (dispatch) => {
+export const fetchShavas = (sortBy, category) => (dispatch) => {
   dispatch({
     type: 'SET_LOADED',
     payload: false,
   })
-  axios.get('http://localhost:3001/shavas').then(({data}) => {
+  axios.get(`http://localhost:3001/shavas?category=${category}`).then(({data}) => {
     dispatch(setShavas(data));
   });
 };

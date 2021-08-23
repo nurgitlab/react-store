@@ -76,7 +76,7 @@ const SortPopup = React.memo(
 );
 
 SortPopup.propTypes = {
-  activeCategory: PropTypes.string.isRequired,
+  activeCategory: PropTypes.oneOf([PropTypes.number, null]),
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   onClickSortType: PropTypes.func.isRequired,
 };

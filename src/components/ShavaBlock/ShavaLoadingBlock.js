@@ -5,6 +5,7 @@ import React from "react";
 function ShavaLoadingBlock() {
   return (
     <ContentLoader
+      className="shava-block"
       speed={4}
       width={280}
       height={380}

@@ -1,10 +1,9 @@
-import React, { Component, useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { Categories, SortPopup } from "../components";
 import ShavaBlock from "../components/ShavaBlock/ShavaBlock";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setCategory, setSortBy } from "../redux/actions/filters";
 import { fetchShavas } from "../redux/actions/shavas";
-import axios from "axios";
 import ShavaLoadingBlock from "../components/ShavaBlock/ShavaLoadingBlock";
 
 
@@ -29,8 +28,8 @@ function Home() {
   const {category, sortBy} = useSelector(({filters}) => filters);
 
   useEffect(() => {
-    dispatch(fetchShavas());
-  }, [category]);
+    dispatch(fetchShavas(sortBy, category));
+  }, [sortBy, category]);
 
   const onSelectCategory = useCallback((index) => {
     dispatch(setCategory(index));
@@ -51,7 +50,7 @@ function Home() {
         <SortPopup
           activeSortType={sortBy}
           items={sortItems}
-          onClickSortType = {onSelectSortType}
+          onClickSortType={onSelectSortType}
         />
       </div>
       <h2 className="content__title">Все шаурмы</h2>
