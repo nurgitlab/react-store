@@ -1,11 +1,13 @@
 import { combineReducers } from "redux";
-import filtersReducer from "./filters";
-import shavasReducer from "./shavas";
+import filters from "./filters";
+import shavas from "./shavas";
+import cart from "./cart";
 
 
 const rootReducer = combineReducers({
-  filters: filtersReducer,
-  shavas: shavasReducer,
+  filters,
+  shavas,
+  cart,
 });
 
 export default rootReducer;
