@@ -4,6 +4,7 @@ import ShavaBlock from "../components/ShavaBlock/ShavaBlock";
 import { useDispatch, useSelector } from "react-redux";
 import { setCategory, setSortBy } from "../redux/actions/filters";
 import { fetchShavas } from "../redux/actions/shavas";
+import { addShavaToCart } from "../redux/actions/cart";
 import ShavaLoadingBlock from "../components/ShavaBlock/ShavaLoadingBlock";
 
 
@@ -39,6 +40,13 @@ function Home() {
     dispatch(setSortBy(type));
   }, []);
 
+  const handleAddShavaToCart = (obj) => {
+    dispatch({
+      type: 'ADD_SHAVA_CART',
+      payload: obj,
+    })
+  }
+
   return (
     <div className="container">
       <div className="content__top">
@@ -59,7 +67,7 @@ function Home() {
           isLoaded
             ? items.map(obj => (
               <ShavaBlock
-                onClickAddShava={(obj)=> console.log(obj)}
+                onClickAddShava={handleAddShavaToCart}
                 key={obj.id}
                 isLoading={true}
                 {...obj}
