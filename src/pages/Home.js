@@ -59,6 +59,7 @@ function Home() {
           isLoaded
             ? items.map(obj => (
               <ShavaBlock
+                onClickAddShava={(obj)=> console.log(obj)}
                 key={obj.id}
                 isLoading={true}
                 {...obj}

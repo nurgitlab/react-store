@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import classNames from "classnames";
 import PropTypes from 'prop-types';
-import ContentLoader from "react-content-loader";
-import ShavaLoadingBlock from "./ShavaLoadingBlock";
+import Button from "../Button";
 
 
-function ShavaBlock({name, imageUrl, price, types, sauces}) {
-  const aviableTypes = ['обычная', 'двойная'];
-  const aviableSauces = ['майонезный', 'острый', 'фирменный'];
+function ShavaBlock({id, name, imageUrl, price, types, sauces, onClickAddShava}) {
+  const availableTypes = ['обычная', 'двойная'];
+  const availableSauces = ['майонезный', 'острый', 'фирменный'];
 
   const [activeType, setActiveType] = useState(types[0]);
   const [activeSauce, setActiveSauce] = useState(sauces[0]);
@@ -20,6 +19,18 @@ function ShavaBlock({name, imageUrl, price, types, sauces}) {
     setActiveSauce(index);
   };
 
+  const onAddShava = () => {
+    const obj = {
+      id,
+      name,
+      imageUrl,
+      price,
+      sauce: availableSauces[activeSauce],
+      type: availableTypes[activeType],
+    };
+    onClickAddShava(obj);
+  };
+
   return (
     <div className="shava-block">
       <img
@@ -30,7 +41,7 @@ function ShavaBlock({name, imageUrl, price, types, sauces}) {
       <h4 className="shava-block__title">{name}</h4>
       <div className="shava-block__selector">
         <ul>
-          {aviableTypes.map((type, index) =>
+          {availableTypes.map((type, index) =>
             (<li
               key={type}
               onClick={() => onSelectType(index)}
@@ -43,7 +54,7 @@ function ShavaBlock({name, imageUrl, price, types, sauces}) {
             </li>))}
         </ul>
         <ul>
-          {aviableSauces.map((sauce, index) =>
+          {availableSauces.map((sauce, index) =>
             (<li
               key={sauce}
               onClick={() => onSelectSauce(index)}
@@ -58,7 +69,11 @@ function ShavaBlock({name, imageUrl, price, types, sauces}) {
       </div>
       <div className="shava-block__bottom">
         <div className="shava-block__price">от {price} ₽</div>
-        <div className="button button--outline button--add">
+        <Button
+          onClick={onAddShava}
+          className="button--add"
+          outline
+        >
           <svg
             width="12"
             height="12"
@@ -73,7 +88,7 @@ function ShavaBlock({name, imageUrl, price, types, sauces}) {
           </svg>
           <span>Добавить</span>
           <i>2</i>
-        </div>
+        </Button>
       </div>
     </div>
   );
@@ -85,6 +100,7 @@ ShavaBlock.propTypes = {
   price: PropTypes.number,
   types: PropTypes.arrayOf(PropTypes.number),
   sauces: PropTypes.arrayOf(PropTypes.number),
+  onAddShava: PropTypes.func,
 };
 
 ShavaBlock.defaultProps = {
