@@ -4,7 +4,6 @@ import ShavaBlock from "../components/ShavaBlock/ShavaBlock";
 import { useDispatch, useSelector } from "react-redux";
 import { setCategory, setSortBy } from "../redux/actions/filters";
 import { fetchShavas } from "../redux/actions/shavas";
-import { addShavaToCart } from "../redux/actions/cart";
 import ShavaLoadingBlock from "../components/ShavaBlock/ShavaLoadingBlock";
 
 
@@ -25,6 +24,7 @@ const sortItems = [
 function Home() {
   const dispatch = useDispatch();
   const items = useSelector(({shavas}) => shavas.items);
+  const cartItems = useSelector(({cart}) => cart.items);
   const isLoaded = useSelector(({shavas}) => shavas.isLoaded);
   const {category, sortBy} = useSelector(({filters}) => filters);
 
@@ -44,8 +44,8 @@ function Home() {
     dispatch({
       type: 'ADD_SHAVA_CART',
       payload: obj,
-    })
-  }
+    });
+  };
 
   return (
     <div className="container">
@@ -69,7 +69,7 @@ function Home() {
               <ShavaBlock
                 onClickAddShava={handleAddShavaToCart}
                 key={obj.id}
-                isLoading={true}
+                addedCount={cartItems[obj.id] && cartItems[obj.id].length}
                 {...obj}
               />
             ))

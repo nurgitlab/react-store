@@ -4,7 +4,16 @@ import PropTypes from 'prop-types';
 import Button from "../Button";
 
 
-function ShavaBlock({id, name, imageUrl, price, types, sauces, onClickAddShava}) {
+function ShavaBlock({
+                      id,
+                      name,
+                      imageUrl,
+                      price,
+                      types,
+                      sauces,
+                      onClickAddShava,
+                      addedCount
+                    }) {
   const availableTypes = ['обычная', 'двойная'];
   const availableSauces = ['майонезный', 'острый', 'фирменный'];
 
@@ -87,7 +96,7 @@ function ShavaBlock({id, name, imageUrl, price, types, sauces, onClickAddShava})
             />
           </svg>
           <span>Добавить</span>
-          <i>2</i>
+          {addedCount && <i>{addedCount}</i>}
         </Button>
       </div>
     </div>
@@ -101,6 +110,7 @@ ShavaBlock.propTypes = {
   types: PropTypes.arrayOf(PropTypes.number),
   sauces: PropTypes.arrayOf(PropTypes.number),
   onAddShava: PropTypes.func,
+  addedCount: PropTypes.number,
 };
 
 ShavaBlock.defaultProps = {
