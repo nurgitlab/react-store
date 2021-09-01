@@ -14,10 +14,14 @@ const cart = (state = initialState, action) => {
           : [...state.items[action.payload.id], action.payload],
       };
 
+      const allShavas = [].concat.apply([], Object.values(newItems));
+      const totalPrice = allShavas.reduce((sum, obj) => obj.price + sum, 0);
+
       return {
         ...state,
         items: newItems,
-        totalCount: [].concat.apply([], Object.values(newItems)).length,
+        totalCount: allShavas.length,
+        totalPrice,
       };
     }
 
