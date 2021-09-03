@@ -12,7 +12,7 @@ export const fetchShavas = (sortBy, category) => (dispatch) => {
     payload: false,
   });
   axios
-    .get(`http://localhost:3001/shavas?${
+    .get(`/shavas?${
       category !== null ? `category=${category}` : ''
     }&_sort=${sortBy.type}&_order=${sortBy.order}`,
     )
