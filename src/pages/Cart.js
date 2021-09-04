@@ -53,7 +53,6 @@ function Cart() {
                   imageUrl={obj.imageUrl}
                   type={obj.type}
                   sauce={obj.sauce}
-                  totalPrice={}
                 />
               ))
             }

@@ -21,7 +21,8 @@ const cart = (state = initialState, action) => {
         },
       };
 
-      const allShavas = [].concat.apply([], Object.values(newItems));
+      const items = Object.values(newItems).map(obj => obj.items);
+      const allShavas = [].concat.apply([], items);
       const totalPrice = getTotalPrice(allShavas);
 
       return {
