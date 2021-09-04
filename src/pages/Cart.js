@@ -50,8 +50,10 @@ function Cart() {
               addedShavas.map((obj) => (
                 <CartItem
                   name={obj.name}
+                  imageUrl={obj.imageUrl}
                   type={obj.type}
                   sauce={obj.sauce}
+                  totalPrice={}
                 />
               ))
             }

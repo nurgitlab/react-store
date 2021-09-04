@@ -1,13 +1,13 @@
 import React from "react";
 
 
-const CartItem = ({name, type, sauce}) => {
+const CartItem = ({name, type, sauce, imageUrl}) => {
   return (
     <div className="cart__item">
       <div className="cart__item-img">
         <img
           className="shava-block__image"
-          src="https://dodoshava-a.akamaihd.net/static/Img/Products/Shava/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+          src={imageUrl}
           alt="Shava"
         />
       </div>
