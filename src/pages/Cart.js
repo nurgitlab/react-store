@@ -6,6 +6,10 @@ import { useSelector } from "react-redux";
 function Cart() {
   const {totalPrice, totalCount, items} = useSelector(({cart}) => cart);
 
+  const addedShavas = Object.keys(items).map(key => {
+    return items[key][0];
+  });
+
   return (
     <div className="content">
       <div className="container container--cart">
@@ -42,13 +46,15 @@ function Cart() {
             </div>
           </div>
           <div className="content__items">
-
-            <CartItem
-              name="1"
-              type="2"
-              size="3"
-            />
-
+            {
+              addedShavas.map((obj) => (
+                <CartItem
+                  name={obj.name}
+                  type={obj.type}
+                  sauce={obj.sauce}
+                />
+              ))
+            }
           </div>
           <div className="cart__bottom">
             <div className="cart__bottom-details">

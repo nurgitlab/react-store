@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const CartItem = ({name, type, size}) => {
+const CartItem = ({name, type, sauce}) => {
   return (
     <div className="cart__item">
       <div className="cart__item-img">
@@ -13,7 +13,7 @@ const CartItem = ({name, type, size}) => {
       </div>
       <div className="cart__item-info">
         <h3>{name}</h3>
-        <p>{type}, {size}.</p>
+        <p>{type}, {sauce}.</p>
       </div>
       <div className="cart__item-count">
         <div className="button button--outline button--circle cart__item-count-minus">
