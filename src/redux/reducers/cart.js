@@ -11,7 +11,7 @@ const cart = (state = initialState, action) => {
     case 'ADD_SHAVA_CART': {
       const currentShavaItems = !state.items[action.payload.id]
         ? [action.payload]
-        : [...state.items[action.payload.id], action.payload];
+        : [...state.items[action.payload.id].items, action.payload];
 
       const newItems = {
         ...state.items,

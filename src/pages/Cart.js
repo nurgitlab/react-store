@@ -7,7 +7,7 @@ function Cart() {
   const {totalPrice, totalCount, items} = useSelector(({cart}) => cart);
 
   const addedShavas = Object.keys(items).map(key => {
-    return items[key][0];
+    return items[key].items[0];
   });
 
   return (
@@ -53,6 +53,7 @@ function Cart() {
                   imageUrl={obj.imageUrl}
                   type={obj.type}
                   sauce={obj.sauce}
+                  totalPrice={items[obj.id].totalPrice}
                 />
               ))
             }
