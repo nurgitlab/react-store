@@ -54,6 +54,7 @@ function Cart() {
                   type={obj.type}
                   sauce={obj.sauce}
                   totalPrice={items[obj.id].totalPrice}
+                  totalCount={items[obj.id].items.length}
                 />
               ))
             }
