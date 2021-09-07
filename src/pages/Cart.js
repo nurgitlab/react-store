@@ -1,14 +1,20 @@
 import React from 'react';
 import CartItem from "../components/CartItem";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart } from "../redux/actions/cart";
 
 
 function Cart() {
+  const dispatch = useDispatch();
   const {totalPrice, totalCount, items} = useSelector(({cart}) => cart);
 
   const addedShavas = Object.keys(items).map(key => {
     return items[key].items[0];
   });
+
+  const onClearCart = () => {
+    dispatch(clearCart());
+  };
 
   return (
     <div className="content">
@@ -42,7 +48,8 @@ function Cart() {
                       strokeLinejoin="round"/>
               </svg>
 
-              <span>Очистить корзину</span>
+              <span onClick={onClearCart}>Очистить корзину</span>
+
             </div>
           </div>
           <div className="content__items">
