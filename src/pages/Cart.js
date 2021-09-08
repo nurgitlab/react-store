@@ -1,8 +1,9 @@
 import React from 'react';
 import CartItem from "../components/CartItem";
 import { useDispatch, useSelector } from "react-redux";
-import { clearCart } from "../redux/actions/cart";
+import { clearCart, removeCartItem } from "../redux/actions/cart";
 import CartEmptyImage from '../scss/assets/img/empty-cart.png';
+import { Link } from "react-router-dom";
 
 
 function Cart() {
@@ -18,6 +19,12 @@ function Cart() {
       dispatch(clearCart());
     }
   };
+
+  const onRemoveItem = (id) => {
+    if (window.confirm('Вы действительно хотите удалить?')){
+      removeCartItem(id)
+    }
+  }
 
   return (
     <div className="content">
@@ -51,9 +58,7 @@ function Cart() {
                   <path d="M11.6666 9.16667V14.1667" stroke="#B6B6B6" strokeWidth="1.2" strokeLinecap="round"
                         strokeLinejoin="round"/>
                 </svg>
-
                 <span onClick={onClearCart}>Очистить корзину</span>
-
               </div>
             </div>
             <div className="content__items">
@@ -66,6 +71,7 @@ function Cart() {
                     sauce={obj.sauce}
                     totalPrice={items[obj.id].totalPrice}
                     totalCount={items[obj.id].items.length}
+                    onRemove={onRemoveItem}
                   />
                 ))
               }
@@ -81,7 +87,6 @@ function Cart() {
                     <path d="M7 13L1 6.93015L6.86175 1" stroke="#D3D3D3" strokeWidth="1.5" strokeLinecap="round"
                           strokeLinejoin="round"/>
                   </svg>
-
                   <span>Вернуться назад</span>
                 </a>
                 <div className="button pay-btn">
@@ -96,12 +101,11 @@ function Cart() {
               Чтобы заказать шаурму, перейди на главную страницу.
             </p>
             <img src={CartEmptyImage} alt="Empty cart"/>
-            <a href="/" className="button button--black">
+            <Link to="/" className="button button--black">
               <span>Вернуться назад</span>
-            </a>
+            </Link>
           </div>)
         }
-
       </div>
     </div>
   );
