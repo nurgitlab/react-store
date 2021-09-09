@@ -21,10 +21,10 @@ function Cart() {
   };
 
   const onRemoveItem = (id) => {
-    if (window.confirm('Вы действительно хотите удалить?')){
-      removeCartItem(id)
+    if (window.confirm('Вы действительно хотите удалить?')) {
+      dispatch(removeCartItem(id));
     }
-  }
+  };
 
   return (
     <div className="content">
@@ -65,6 +65,7 @@ function Cart() {
               {
                 addedShavas.map((obj) => (
                   <CartItem
+                    id={obj.id}
                     name={obj.name}
                     imageUrl={obj.imageUrl}
                     type={obj.type}
