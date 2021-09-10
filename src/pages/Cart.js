@@ -1,7 +1,7 @@
 import React from 'react';
 import CartItem from "../components/CartItem";
 import { useDispatch, useSelector } from "react-redux";
-import { clearCart, removeCartItem } from "../redux/actions/cart";
+import { clearCart, minusCartItem, plusCartItem, removeCartItem } from "../redux/actions/cart";
 import CartEmptyImage from '../scss/assets/img/empty-cart.png';
 import { Link } from "react-router-dom";
 
@@ -24,6 +24,14 @@ function Cart() {
     if (window.confirm('Вы действительно хотите удалить?')) {
       dispatch(removeCartItem(id));
     }
+  };
+
+  const onPlusItem = (id) => {
+    dispatch(plusCartItem(id));
+  };
+
+  const onMinusItem = (id) => {
+    dispatch(minusCartItem(id));
   };
 
   return (
@@ -73,6 +81,8 @@ function Cart() {
                     totalPrice={items[obj.id].totalPrice}
                     totalCount={items[obj.id].items.length}
                     onRemove={onRemoveItem}
+                    onMinus={onMinusItem}
+                    onPlus={onPlusItem}
                   />
                 ))
               }
