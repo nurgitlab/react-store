@@ -4,9 +4,16 @@
       "id": 0,
       "imageUrl": "https://avatars.mds.yandex.net/get-zen_doc/1101166/pub_5c1be5b2e4602000a991a2bc_5c1bf72576ee8500aa4617ff/scale_1200",
       "name": "Уйгурская",
-      "types": [0, 1],
-      "sauces": [0, 1, 2],
-      "price": 803,
+      "types": [
+        0,
+        1
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
+      "price": 228,
       "category": 4,
       "rating": 4
     },
@@ -14,8 +21,14 @@
       "id": 1,
       "imageUrl": "https://zakaz.kebabsofra.ru/wp-content/uploads/2020/04/item_3059441_1-416x277.jpeg",
       "name": "Белорусская (с картошкой)",
-      "types": [0],
-      "sauces": [0, 1, 2],
+      "types": [
+        0
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
       "price": 245,
       "category": 1,
       "rating": 6
@@ -24,8 +37,14 @@
       "id": 2,
       "imageUrl": "https://oxusmoscow.ru/wp-content/uploads/2018/03/shaurmaDSC_2374-600x400.jpg",
       "name": "Казахская (из конины)",
-      "types": [0],
-      "sauces": [0, 1, 2],
+      "types": [
+        0
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
       "price": 295,
       "category": 4,
       "rating": 4
@@ -34,8 +53,14 @@
       "id": 3,
       "imageUrl": "https://p1.zoon.ru/preview/I4RWelt2APzvnliOjz2fDA/1180x520x85/0/b/4/4f85bd543c72dd8114001989_51469f8b57004.jpg",
       "name": "Рыбная",
-      "types": [1],
-      "sauces": [0, 1, 2],
+      "types": [
+        1
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
       "price": 275,
       "category": 2,
       "rating": 2
@@ -44,9 +69,16 @@
       "id": 4,
       "imageUrl": "https://vchaspik.ua/sites/default/files/story/u11979/1471254612_10.jpg",
       "name": "С чипсами",
-      "types": [0, 1],
-      "sauces": [0, 1, 2],
-      "price": 415,
+      "types": [
+        0,
+        1
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
+      "price": 185,
       "category": 3,
       "rating": 8
     },
@@ -54,9 +86,15 @@
       "id": 5,
       "imageUrl": "https://static.tildacdn.com/tild3363-3039-4364-a130-313831663939/_-.jpg",
       "name": "Ананасовая",
-      "types": [0],
-      "sauces": [0, 1, 2],
-      "price": 580,
+      "types": [
+        0
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
+      "price": 180,
       "category": 3,
       "rating": 2
     },
@@ -64,9 +102,16 @@
       "id": 6,
       "imageUrl": "https://im0-tub-kz.yandex.net/i?id=2a9f31cd243b3dbe366a076076d098a7-sr&n=13",
       "name": "Black Salami",
-      "types": [0, 1],
-      "sauces": [0, 1, 2],
-      "price": 675,
+      "types": [
+        0,
+        1
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
+      "price": 500,
       "category": 2,
       "rating": 9
     },
@@ -74,9 +119,16 @@
       "id": 7,
       "imageUrl": "https://avatars.mds.yandex.net/get-zen_doc/60857/pub_5e1c5829ee5a8a00b1ccd55d_5e1db76211691d00ae97360d/scale_1200",
       "name": "Турецкая",
-      "types": [0, 1],
-      "sauces": [0, 1, 2],
-      "price": 450,
+      "types": [
+        0,
+        1
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
+      "price": 250,
       "category": 4,
       "rating": 10
     },
@@ -84,8 +136,15 @@
       "id": 8,
       "imageUrl": "https://idoska-voronezh.ru/wp-content/uploads/27ec3b4e2142544c0a97ddac2d69b1fe.jpg",
       "name": "Домашняя Jambo",
-      "types": [0, 1],
-      "sauces": [0, 1, 2],
+      "types": [
+        0,
+        1
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
       "price": 395,
       "category": 2,
       "rating": 10
@@ -94,8 +153,15 @@
       "id": 9,
       "imageUrl": "https://static.mk.ru/upload/entities/2018/03/16/articles/facebookPicture/7c/73/df/5a/db6f76573d84cdc0c5e030eeee26aafa.jpg",
       "name": "Мясная",
-      "types": [0, 1],
-      "sauces": [0, 1, 2],
+      "types": [
+        0,
+        1
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
       "price": 285,
       "category": 2,
       "rating": 7
@@ -104,9 +170,16 @@
       "id": 10,
       "imageUrl": "https://abnews.ru/wp-content/uploads/2021/07/shawarma-4029889_1280-600x400.jpg",
       "name": "Шаверма Ленинградская",
-      "types": [0, 1],
-      "sauces": [0, 1, 2],
-      "price": 285,
+      "types": [
+        0,
+        1
+      ],
+      "sauces": [
+        0,
+        1,
+        2
+      ],
+      "price": 265,
       "category": 0,
       "rating": 3
     }
