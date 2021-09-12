@@ -1,4 +1,4 @@
-<h1 align="center">PostsApp</h1>
+<h1 align="center">Online Shaurma Store</h1>
 <h2 align="center">
 
 <p align="center"><img  src="./readme_assets/scr1.png" width="100%"></p>
