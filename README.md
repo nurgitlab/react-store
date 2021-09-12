@@ -1,44 +1,71 @@
-<h1 align="center">Online Shaurma Store</h1>
+<h1 align="center">Online Shaurma</h1>
 <h2 align="center">
 
 <p align="center"><img  src="./readme_assets/scr1.png" width="100%"></p>
 
+___
+
 ## Description
 
-**Posts app**
+**Shaurma online**
 
-I created this application to practice creating posts.
+This is a shop for selling shaurma.
+Here you can choose the size and sauce for the shaurma and enjoy its taste.
+
+___
 
 ## How to use
-- **Write** your post to the panel.
-- **Also** you can download posts from another site
+- **Sort** by price.
+<p align="center"><img  src="./readme_assets/scr2.png" width="100%"></p>
+
+- **Choose** the right size and sauce.
+
+- **Add** product to cart.
+<p align="center"><img  src="./readme_assets/scr3.png" width="100%"></p>
+
+- **Place** an order.
+<p align="center"><img  src="./readme_assets/scr4.png" width="100%"></p>
+
+- **If** you change your mind, you can empty the cart and return to the main page.
+<p align="center"><img  src="./readme_assets/scr5.png" width="100%"></p>
+
+___
 
 ## About the project.
 
 ### Objectives of the project
 
-- This is one of the first projects which I did on React.
-- In this project I tried to learn work with **async**.
+- Learn to work with React, Redux and etc.
+- In this project I tried to learn work with **react-content-loader**, **react-thunk**.
 
-### Bootstrap
-
-- If you encounter problems installing the project, run it with version 4.x.x.
-- The app is not compatible with Bootstrap v.5.x.x!
-
-### Async
-
-- If you click on the blue button, then posts from <code>[typicode.com](адрес "https://jsonplaceholder.typicode.com/posts?_limit=5")</code> will be loaded.
-
+___
 
 ## Project setup
+- **Important!**
 
+Before starting the project, make sure that the ports **localhost:3000** and **localhost:3001** are open.
+
+- **Make** sure you have installed **yarn**.
+
+- Run yarn and application on port 3000.
 ```
 yarn
 yarn start
 ```
 
+- Start a fake server (json-sever).
+```
+yarn server
+```
+The server will start on port 3001 and will allow you to upload products to the site.
+
+___
+
 ## Future scope
 
-- Draw a more beautiful design
-- Local database needs to be added
-- Synchronization with Firebase
+Plans for the distant future 
+
+- Add project information to a separate window
+- Fix bugs in the cart (order amount on the cart icon)
+- Add transition animations
+- Add payment
